@@ -93,11 +93,13 @@ body {
 
 .home-content h2 {
     font-size: 2rem;
+    font-size: clamp(1.6rem, 4vw, 3.5rem);
     margin-bottom: 10px;
 }
 
 .home-content p {
     font-size: 1rem;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
     margin-bottom: 20px;
 }
 
@@ -108,6 +110,7 @@ body {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color all 0.3s ease-in-out;
+    font-size: 1.1rem;
 }
 
 .home-content a:hover {
