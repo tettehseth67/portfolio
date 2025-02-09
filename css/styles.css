@@ -87,7 +87,7 @@ body {
 }
 /* Home */
 .home {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/hero1.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -419,7 +419,7 @@ textarea {
 
 /* Footer */
 footer {
-    background-color: #f3f3f3;
+    background-color: #fdfdfd;
     width: 100%;
     z-index: 1000;
     font-size: 1.0rem;
