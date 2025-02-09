@@ -67,6 +67,16 @@ body {
     margin-right: 8px;
 }
 
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    color: #fff;
+    padding: 20px;
+}
+
 .main-content {
     margin-left: 240px;
     height: 100vh;
@@ -86,7 +96,8 @@ body {
 }
 
 .home-content {
-    min-width: 500px;
+    max-width: 1100px;
+    margin: 0 auto;
     line-height: 1.6;
     padding: 0 30px;
 }
@@ -120,8 +131,12 @@ body {
 section {
     transition: height all 0.3s ease-in;
     padding: 40px 20px;
-    height: 500px;
+    height: 600px;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* About */
@@ -131,9 +146,10 @@ section.about {
 }
 
 .about-content {
-    min-width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
     line-height: 1.6;
-    padding:0 40px;
+    padding:0 30px;
 }
 
 section.about h2 {
@@ -210,6 +226,77 @@ section.services h2 {
     line-height: 1.2;
 }
 
+/* Projects*/
+
+section.projects {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.projects-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 2rem;
+}
+
+.projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.project {
+    flex: 1 1 calc(33.333% - 10px);
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    min-height: 240px;
+}
+
+/* .project img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+} */
+
+.project h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.project p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.project a {
+    color: #000;
+    background-color: #f3f3f3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color all 0.3s ease-in-out;
+    text-align: initial;
+}
+
+.project a:hover {
+    background-color: #000;
+    color: #fff;
+    transition: background-color all 0.3s ease-in-out;
+}
+
 /* Contact */
 
 section.contact {
@@ -226,10 +313,9 @@ section.contact {
     max-width: 1100px;
     margin: 0 auto;
     border-radius: 24px;
-}
-
-.col-lg-10 {
-    margin: 10px;
+    padding:0 30px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .contact-wrapper .row {
@@ -318,11 +404,26 @@ textarea {
     outline: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.0rem;
 }
 
 .contact-form h3 {
     font-size: 1.8rem;
     margin-bottom: 20px;
+}
+
+.contact-form button:hover {
+    background-color: #4CAF50;
+}
+
+.contact-form .form-label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.form-control::-moz-input-placeholder {
+    color: red;
 }
 
 /* Footer */
@@ -362,6 +463,11 @@ footer {
             flex: 1 1 100%;
             margin-bottom: 20px;
         }
+
+        .project {
+            flex: 1 1 100%;
+            margin-bottom: 20px;
+        }
     
         .container {
             padding: 20px;
@@ -386,6 +492,17 @@ footer {
         display: none;
     }
 
+    .hamburger-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #f3f3f3;
+        z-index: 1000;
+    }
+
     .main-content {
         margin-left: 0;
     }
@@ -404,6 +521,11 @@ footer {
     }
 
     .service {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .project {
         flex: 1 1 100%;
         margin-bottom: 20px;
     }
@@ -432,8 +554,14 @@ footer {
 
     section.contact,
     section.about,
-    section.services {
+    section.services,
+    section.projects {
         height: auto;
         padding: 40px 0;
+    }
+
+    .project {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
     }
 }
