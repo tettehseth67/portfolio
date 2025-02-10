@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -278,7 +279,7 @@ section.projects {
 .project p {
     font-size: 0.9rem;
     margin-bottom: 20px;
-    line-height: 1.1;
+    line-height: 1.3;
 }
 
 .project a {
